@@ -17,19 +17,34 @@ class RegisterUserType extends AbstractType
     {
         $builder
             ->add('firstName', TextType::class, [
-                'label' => 'Votre prénom'
+                'label' => 'Votre prénom',
+                'attr' => [
+                    'placeholder' => "Veuillez renseigner votre nom"
+                ]
             ])
             ->add('lastName', TextType::class, [
-                'label' => 'Votre nom'
+                'label' => 'Votre nom',
+                'attr' => [
+                    'placeholder' => "Veuillez renseigner votre prénom"
+                ]
             ])
             ->add('email', EmailType::class, [
-                'label' => 'Votre adresse email'
+                'label' => 'Votre adresse email',
+                'attr' => [
+                    'placeholder' => "Veuillez renseigner votre adresse email"
+                ]
             ])
             ->add('password', PasswordType::class, [
-                'label' => 'Votre mot de passe'
+                'label' => 'Votre mot de passe',
+                'attr' => [
+                    'placeholder' => "Veuillez renseigner votre mot de passe"
+                ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Inscription'
+                'label' => 'Inscription',
+                'attr' => [
+                    'class' => 'btn btn-success'
+                ]
             ])
         ;
     }
